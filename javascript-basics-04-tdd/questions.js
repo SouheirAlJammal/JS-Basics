@@ -98,45 +98,72 @@ const BMI = (weight, height) => {
 }
 
 const createLanguagesArray = () => {
+    let languageArr=["Html", "CSS", "Java", "PHP"];
+    return languageArr;
+    
 
 }
 
 const createNumbersArray = () => {
+    let numberArr=[];
+    for (let i=0; i< 6;i++){numberArr.push(i);}
+    return numberArr;
+    
 
 }
 
 const replaceElement = (languages) => {
+languages[2]="Javascript";
+return languages
+
 
 }
 
 const addElement = (languages) => {
 
+    languages.push('Ruby','Python');
+
+    return languages;
+
 }
 
 const addNumberElement = (numbers) => {
+    numbers.unshift(-2,-1)
+    return numbers;
+
 
 }
 
 const removeFirst = (languages) => {
-
+languages.shift();
+return languages
 }
 
 const removeLast = (languages) => {
 
+    languages.pop();
+
+    return languages;
+
 }
 
 const convertStrToArr = (social_arr) => {
-
+let arr=social_arr.split(",")
+return arr;
 }
 
 const convertArrToStr = (languages) => {
+    let newString=languages.join(",");
+    return newString;
 
 }
 
 const sortArr = (social_arr) => {
+    return social_arr.sort();
 
 }
 
 const invertArr = (social_arr) => {
+    return social_arr.reverse();
 
 }
