@@ -1,24 +1,17 @@
 
 let images = document.querySelectorAll("img");
-
-for(let i=0; i<images.length;i++){
-
-images[i].addEventListener('mouseover', function () {
-
-    images[i].src = "images/image" + (Math.floor(Math.random() * images.length) + 1) + ".jpg";
-})
-
+images.forEach((image, i) => {
+    let imageIndex=i+1;
+switch (imageIndex) {
+    case 1: imageIndex=5;break;
+    case 2: imageIndex=4;break;
+    case 3: imageIndex=5;break;
+    case 4: imageIndex=2;break;
+    case 5: imageIndex=1;break;
 
 }
 
-// images.forEach((image, i) => {
+ image.addEventListener('mouseover',()=>image.src = "images/image" +imageIndex+ ".jpg");
 
 
-//     image.addEventListener('mouseover', function () {
-
-//         image.src = "images/image" + (Math.floor(Math.random() * images.length) + 1) + ".jpg";
-//     })
-
-
-// });
-
+})
